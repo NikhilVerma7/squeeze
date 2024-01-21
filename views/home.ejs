@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>squeezeIt</title>
+</head>
+<body>
+    <h1> squeezeit</h1>
+    <div>
+        <form method = "post" action="/url">
+        <label> Enter your Original Url    :</label>
+        <input type = "text" name="url" placeholder="https://websitename.com" /> 
+        <button type="submit"> Squeeze</button> 
+
+
+       <% if (locals.id) { %>
+        <p>URL generated = http://localhost:3000/<%= id  %></p>
+      <% } %>
+
+    </form>
+    </div>
+</body>
+</html>
