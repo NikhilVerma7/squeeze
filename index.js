@@ -10,8 +10,8 @@ require('dotenv').config();
 const connectToMongoDB = require("./db/connect");
 
 const lnk = process.env.DBlink;
-console.log(lnk);
-connectToMongoDB(lnk)
+// console.log(lnk);
+connectToMongoDB()
 .then(console.log('Database connected Successfully !!!!')); 
 
 
