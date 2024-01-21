@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express(); 
 const path = require('path');
 const urlRoute = require("./routes/url");
@@ -11,8 +12,10 @@ const connectToMongoDB = require("./db/connect");
 
 const lnk = process.env.DBlink;
 // console.log(lnk);
-connectToMongoDB()
-.then(console.log('Database connected Successfully !!!!')); 
+// connectToMongoDB()
+// .then(console.log('Database connected Successfully !!!!')); 
+
+mongoose.connect('mongodb://127.0.0.1:27017/shrinkIt');
 
 
 app.set("view engine", "ejs");
